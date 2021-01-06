@@ -279,7 +279,7 @@ cd ../.. || exit 99
 echo '---- Checking out casablanca master ----'
 wget https://codeplexarchive.blob.core.windows.net/archive/projects/casablanca/casablanca.zip  || { echo 'Unable to download casablanca from codeplex'; exit 99; }
 unzip casablanca.zip
-cd casablanca/Release || exit 99
+cd /root/prereqs/sourceCode/casablanca/Release || exit 99
 cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release . || exit 8
 make || exit 8
 #make test || exit 9
